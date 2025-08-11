@@ -1,8 +1,8 @@
 import React from "react";
 
 export const AboutSection = () => (
-  <section className="bg-[#FCF7F0] flex flex-col-reverse lg:flex-row items-center gap-12 px-4 lg:px-16 py-16">
-    <div className="relative w-65 h-85  rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-tl from-[#f7b2f7] to-[#ffffff22] shadow-xl mx-auto">
+  <section className="bg-[#FCF7F0] flex flex-col-reverse lg:flex-row items-center justify-center gap-30 px-4 lg:px-16 py-16">
+    <div className="relative w-65 h-85 rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-tl from-[#f7b2f7] to-[#ffffff22] shadow-xl">
       {/* Use your own image here */}
       <img
         src="/designer.png"
