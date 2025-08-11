@@ -14,14 +14,12 @@ const navLinks = [
 export const HeroSection = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Prevent background scroll when menu is open
   useEffect(() => {
     if (menuOpen) {
       document.body.classList.add("overflow-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
     }
-    // Cleanup on unmount
     return () => {
       document.body.classList.remove("overflow-hidden");
     };
@@ -30,10 +28,8 @@ export const HeroSection = () => {
   return (
     <>
       <section className="relative bg-black text-white pb-8 lg:pb-0 overflow-hidden">
-        {/* Nav Container */}
         <nav className="flex justify-between items-center py-6 px-4 lg:px-16 relative z-10">
           <span className="text-xs uppercase tracking-widest">ERICA JONES</span>
-          {/* Desktop/Laptop Menu */}
           <div className="hidden md:flex gap-8 items-center text-sm">
             {navLinks.map((link) => (
               <a
@@ -48,7 +44,6 @@ export const HeroSection = () => {
           <button className="bg-white text-black rounded-full px-5 py-2 text-xs hidden md:inline-block">
             GET IN TOUCH
           </button>
-          {/* Hamburger for Mobile/Tablet */}
           <button
             className="md:hidden ml-4 focus:outline-none"
             onClick={() => setMenuOpen(true)}
@@ -58,7 +53,6 @@ export const HeroSection = () => {
           </button>
         </nav>
 
-        {/* Mobile Menu Overlay — GLASS EFFECT */}
         {menuOpen && (
           <div
             className={`
@@ -69,7 +63,6 @@ export const HeroSection = () => {
             aria-modal="true"
             role="dialog"
           >
-            {/* Top: X icon & brand */}
             <div className="flex items-center justify-between mb-15">
               <span className="text-base font-bold uppercase tracking-wider">
                 ERICA JONES
@@ -82,7 +75,6 @@ export const HeroSection = () => {
                 <X size={32} />
               </button>
             </div>
-            {/* Middle: Nav links */}
             <div className="flex flex-col gap-4 mb-2">
               {navLinks.map((link) => (
                 <a
@@ -95,7 +87,6 @@ export const HeroSection = () => {
                 </a>
               ))}
             </div>
-            {/* Bottom: Get In Touch */}
             <div className="mb-auto flex justify-center">
               <button className="w-full bg-white text-black text-base rounded-full py-3">
                 GET IN TOUCH
@@ -104,7 +95,6 @@ export const HeroSection = () => {
           </div>
         )}
 
-        {/* Hero Content */}
         <div className="px-4 lg:px-16 py-8 lg:py-20 relative z-10 sm:min-h-[100vh] lg:h-auto">
           <span className="block mb-2 text-md tracking-wider text-yellow-300">
             &#128075; HEY, I AM ERICA
@@ -128,15 +118,4 @@ export const HeroSection = () => {
   );
 };
 
-// {
-//   /* Bottom Parallelogram */
 
-//   <div
-//     aria-hidden="true"
-//     className="absolute bottom-0 left-0 w-full h-10 z-0 pointer-events-none"
-//     style={{
-//       transform: "skewY(-6deg)",
-//       transformOrigin: "top left",
-//       background: "linear-gradient(180deg, #000 100%)",
-//     }}
-//   />;

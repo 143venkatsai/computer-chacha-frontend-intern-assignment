@@ -29,7 +29,6 @@ const logos = [
 
 export const ClientLogos: React.FC = () => (
   <div className="relative w-full flex items-center justify-center py-12 bg-[#FCF7F0]">
-    {/* background gradient parallelogram */}
     <div
       className="
         absolute inset-0
@@ -39,13 +38,6 @@ export const ClientLogos: React.FC = () => (
         z-0
       "
       style={{
-        // background:
-        //   "linear-gradient(180deg, #000000 0%, #A53392 25%, #FF7E3F 50%, #FFD684 75%, #FAF5EC 100%)",
-
-        // width: "100vw",
-        // height: "300px",
-        // left: "-5vw",
-
         background: `
     linear-gradient(
       180deg,
@@ -58,7 +50,6 @@ export const ClientLogos: React.FC = () => (
   `,
       }}
     />
-    {/* Logo Row (foreground) */}
     <div
       className="
     relative z-10
